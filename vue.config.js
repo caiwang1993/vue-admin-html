@@ -12,8 +12,10 @@ module.exports = {
             };
         } else {
             // 为开发环境修改配置...
+
         }
     },
+    devServer:{open:true},
     chainWebpack: config => {
         config.plugin("html").tap(args => {
             args[0].template = process.env.template;
